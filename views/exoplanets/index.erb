@@ -1,0 +1,26 @@
+<a class="main" href="/">Main site</a>
+
+<link rel="stylesheet" type="text/css" href="/style/style.css"/>
+<br>
+<table>
+<br>
+  <tr>
+    <th class="first_row">NAME</th>
+    <th class="first_row">TYPE</th>
+    <th class="first_row">HABITABLE</th>
+    <th class="first_row">MASS</th>
+    <th class="first_row">DISCOVERY</th>
+  </tr>
+  <tr>
+    <% @exoplanets.each do |exoplanet| %>
+    <td><a href="/exoplanets/<%= exoplanet.id %>"><%= exoplanet.name %></a></td>
+    <td><%= exoplanet.type %></td>
+    <td><%= exoplanet.habitable %></td>
+    <td><%= exoplanet.mass %></td>
+    <td><%= exoplanet.discovery%></td>
+  </tr>
+    <%end%>
+</table>
+
+
+<p><a class="add" href="/exoplanets/new">Add an exoplanet</a></p>

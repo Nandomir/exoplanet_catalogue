@@ -1,0 +1,17 @@
+<a class="main" href="/">Main site</a>
+
+<p>Name: <%= @exoplanet.name%></p>
+<p>Type: <%= @exoplanet.type %></p>
+<p>Mass: <%= @exoplanet.mass %></p>
+<p>Discovery: <%= @exoplanet.discovery %></p>
+</hr>
+
+<form method="get" action="/exoplanets/<%= @exoplanet.id %>/edit">
+<input class="submit" type="submit" value="Edit planet data">
+</form>
+
+<br>
+
+<form method="post" action="/exoplanets/<%= @exoplanet.id %>/delete">
+<input class="delete" type="submit" value="Delete exoplanet">
+</form>

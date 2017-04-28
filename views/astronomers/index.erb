@@ -1,0 +1,19 @@
+<a class="main" href="/">Main site</a>
+
+<link rel="stylesheet" type="text/css" href="/style/style.css"/>
+<br>
+<table>
+<br>
+  <tr>
+    <th class="first_row">NAME</th>
+    <th class="first_row">OBSERVATION TYPE</th>
+  </tr>
+  <tr>
+  <% @astronomer.each do |astronomer| %>
+    <td><a href="/astronomers/<%= astronomer.id %>"><%= astronomer.discoverer %></a></td>
+    <td><%= astronomer.observation_type %></td>
+  </tr>
+<%end%>
+</table>
+
+<p><a class="add" href="/astronomers/new">Add an observerer</a></p>

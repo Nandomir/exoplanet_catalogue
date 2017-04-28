@@ -1,0 +1,21 @@
+<a class="main" href="/">Main site</a>
+
+<link rel="stylesheet" type="text/css" href="/style/style.css"/>
+<br>
+<table>
+<br>
+  <tr>
+    <th class="first_row">NAME</th>
+    <th class="first_row">TYPE</th>
+    <th class="first_row">MASS</th>
+    <th class="first_row">DISCOVERY</th>
+  </tr>
+  <tr>
+<% @exoplanet.each do |exoplanet| %>
+  <td><%= exoplanet.name%></td>
+<td><%= exoplanet.type %></td>
+<td><%= exoplanet.mass %></td>
+<td>Discovery: <%= exoplanet.discovery %></td>
+  </tr>
+<%end%>
+</table>

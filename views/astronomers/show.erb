@@ -1,0 +1,15 @@
+<a class="main" href="/">Main site</a>
+
+<p>Name: <%= @astronomer.discoverer%></p>
+<p>Observation type: <%= @astronomer.observation_type %></p>
+</hr>
+
+<form method="get" action="/astronomers/<%= @astronomer.id %>/edit">
+<input class="submit" type="submit" value="Edit planet data">
+</form>
+
+<br>
+
+<form method="post" action="/astronomers/<%= @astronomer.id %>/delete">
+<input class="delete" type="submit" value="Delete observerer">
+</form>

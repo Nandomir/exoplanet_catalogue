@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Exoplanets catalogue</title>
+  <link rel="icon" href="/images/planetary_system.png"/>
+  <link rel="stylesheet" type="text/css" href="/style/style.css"/>
+</head>
+<body>
+
+  <div id="container">
+    <div id="header">
+      <h1>Exoplanet catalogue</h1>
+      <p>Welcome to the extra-solar planets catalogue, where you can find a list of both known observatories and exoplanets.</p>
+    </div>    
+    <div id="content">
+      <div id="nav">
+          <ul>
+            <li><a class="round" href="/astronomers">Observatories</a></li>
+            <li><a class="round" href="/exoplanets">Known exoplanets</a></li>
+            <li><a class="round" href="/exoplanets/habitable">Habitable zone planets</a></li>
+            <li><a class="round" href="/discoveries">Confirmed detections</a></li>
+
+          </ul>
+      </div>
+      <div id="main">
+        <%= yield %>
+      </div>
+    </div>
+    <div id="footer">
+      <p>Project 1 Codeclan &copy; 2017 Ferdinando Sendyka</p>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<a class="main" href="/">Main site</a>
+
+<form method="post" action="/exoplanets/<%= @exoplanet.id %>">
+<br>
+
+<label for="name">Planet's name:</label>
+<input type="text" id="name" name="name" value="<%= @exoplanet.name%>"/>
+<br>
+<br>
+
+<label for="type">Type:</label>
+<select id="type" name="type">
+  <option <%= "selected" if (@exoplanet.type == "Hot Jupiter") %> value="Hot Jupiter">Hot Jupiter</option>
+  <option <%= "selected" if (@exoplanet.type == "Mini Neptune") %> value="Mini Neptune">Mini Neptune</option>
+  <option <%= "selected" if (@exoplanet.type == "Rocky") %> value="Rocky">Rocky</option>
+  <option <%= "selected" if (@exoplanet.type == "Super Earth") %> value="Super Earth">Super earth</option>
+</select>
+<br>
+<br>
+
+  <label for="habitable">Potentially habitable:</label>
+  <select id="habitable" name="habitable">
+    <option <%= "selected" if (@exoplanet.habitable == "true") %> value="true">Yes</option>
+    <option <%= "selected" if (@exoplanet.habitable == "false") %> value="false">No</option>
+  </select>
+<br>
+<br>
+
+  <label for="mass">Mass</label>
+  <input type="number" step=0.01 min=0 name="mass" value="<%= @exoplanet.mass%>"/>
+<br>
+<br>
+
+  <label for="discovery">Discovery date</label>
+  <input type="date" id="discovery" name="discovery" value="<%= @exoplanet.discovery%>"/>
+
+<input class="submit" type="submit" value="Update exoplanet"/>
+</form>

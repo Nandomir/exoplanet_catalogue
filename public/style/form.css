@@ -1,0 +1,7 @@
+select {
+ padding: 10px 30px 10px 10px;
+ -webkit-appearance: none;
+ background: url('/images/planetary_system.png') ;
+ font-family: 'Oswald', serif;
+ border: 1px solid #eee;
+} 
